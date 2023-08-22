@@ -1,0 +1,504 @@
+html,body,div,span,iframe,h1,h2,h3,h4,p,pre,del,em,img,b,i,dl,dt,dd,ol,ul,li,form,table,tbody,tr,th,td,article,aside,footer,header,nav,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box}
+article,aside,footer,header,nav,section{display:block}
+body{line-height:1;overflow-wrap:break-word;word-wrap:break-word}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;box-sizing:border-box}
+a{margin:0;padding:0;text-decoration:none;outline:none;font-size:100%;vertical-align:baseline;background:transparent}
+a img{border-style:none}
+ul,li{list-style-type:none}
+hr{border:0;display:block;margin:1em 0;padding:0;height:1px}
+.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
+
+
+
+html{
+font-size:62.5%;
+height:100%
+}
+body{
+background:#fff;
+color:#735648;
+font-size:1.3em;
+font-family:'Segoe UI','游ゴシック Medium','Yu Gothic Medium','游ゴシック体',YuGothic,'Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+letter-spacing:.1em;
+line-height:1.5;
+text-align:center;
+height:100%
+}
+
+a{
+color:inherit
+}
+#rightcolumn a{
+border-bottom:1px solid #ccc;
+color:#7ec1c5;
+display:inline-block;
+margin:3px 3px 3px 0;
+transition:.6s
+}
+
+#rightcolumn a:hover{
+background:rgba(92,77,65,.8);
+border-radius:5px;
+color:#fff
+}
+#rightcolumn a.bg-none,a.bg-none{
+border-bottom:0
+}
+#rightcolumn .line > a{
+border-bottom:0;
+margin:0;
+}
+#rightcolumn a.bg-none:hover,a.bg-none:hover{
+background:none;
+color:inherit
+}
+
+
+
+header,#rightcolumn-wrap,#leftcolumn,#index{
+background:#5c4d41 /* 周りの背景色 */
+}
+#wrapper{
+background:#fff;
+color:#fff;
+position:relative;
+text-align:left;
+text-shadow:5px 5px 1px #3c322b; /* 文字の影 */
+min-height:100%
+}
+#header-inner{
+padding:20px;
+text-align:right
+}
+#rightcolumn-wrap{
+float:right;
+margin-left:-250px; /* (※1)と同じだけマイナス */
+width:100%
+}
+#rightcolumn{
+background:#fff;
+color:#735648;
+border-radius:10px 0 0 0;
+margin-left:250px; /* (※1)と同じ */
+padding:20px 20px 20px 35px;
+position:relative;
+text-shadow:none
+}
+#leftcolumn-wrap{
+background:#fff;
+float:left;
+width:250px; /* 左側の幅(※1) */
+}
+#leftcolumn{
+border-radius:0 0 10px 0;
+padding:20px 20px 20px 35px
+}
+footer{
+color: #3c322b;
+text-align:center;
+text-shadow:none
+}
+#footer-inner{
+padding:10px 20px
+}
+/* ===================================
+メニュー
+=================================== */
+
+#menu{
+display:block;
+margin:0 auto
+}
+nav li a,nav li span{
+color:#fff;
+display:block;
+font-size:1.3em;
+font-weight:700;
+padding:5px 0;/* 一列の高さはここで調節 */
+position:relative
+}
+nav li a:first-letter,nav li span:first-letter{
+color:#e4be8b
+}
+nav li a:hover,nav li span:hover{
+background:rgba(222,222,222,.6);
+border-radius:5px;
+transition:.6s
+}
+.sub-menu{
+display:none;
+margin:0;
+overflow:hidden
+}
+.sub-menu li{
+text-indent:1em
+}
+.sub-menu li a:first-letter{
+color:inherit;
+}
+/*  メニューの「>」
+------------------------------ */
+nav li span:after{
+border-top:3px solid #fff; /* 色 */
+border-right:3px solid #fff; /* 色 */
+content:"";
+display:block;
+margin-top:-5px;
+position:absolute;
+height:5px;width:5px;
+top:50%;right:10px;
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg);
+transition:.5s
+}
+nav li span.open:after{
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+transform:rotate(135deg)
+}
+/*  メニューを開くボタン非表示
+------------------------------ */
+#open{display:none}
+
+/* ===================================
+ページ上部へのリンク、著作権表示
+=================================== */
+
+#pagetop{
+background:rgba(115,86,72,.8);/* 背景 */
+border-radius:30px;
+box-sizing:border-box;
+color:#fff;/* 色 */
+display:block;
+font-size:13px;
+letter-spacing:normal;
+line-height:20px;
+padding-top:12px;
+position:fixed;
+text-align:center;
+height:40px;width:40px; /* 大きさ */
+bottom:-80px;
+z-index:10
+}
+#pagetop:before{
+content:"";
+display:block;
+border-left:2px solid #fff;
+border-top:2px solid #fff;
+position:absolute;
+top:10px;left:16px;
+height:6px;width:6px;
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg)
+}
+#pagetop:hover{
+background:rgba(115,86,72,.5)
+}
+#fl a{
+background:#735648;
+border-radius:5px;
+color:#fff;
+display:inline-block;
+padding:5px
+}
+
+/* ===================================
+index
+=================================== */
+
+#index{
+margin:0 auto;
+height:auto
+}
+.indexbox{
+background:#fff;
+border-radius:10px;
+margin:20px auto;
+padding:20px;
+text-align:left;
+max-width:580px
+}
+
+/* ===================================
+見出し、枠、線
+=================================== */
+
+h1{
+font-size:2em;
+margin:0 0 10px;
+}
+h1:first-letter{
+color:#7ec1c5
+}
+h2{
+border-bottom:2px solid #db856e;
+font-size:1.4em;
+letter-spacing:.2em;
+margin:10px 0 10px -10px;
+padding:.2em 0;
+position:relative;
+text-shadow:5px 5px 1px #ccc /* 文字の影 */
+}
+h2:first-letter{
+color:#db856e;
+font-size:1.6em
+}
+h2::after{
+background-color:#735648;
+position:absolute;
+bottom:-2px;left:0;
+content:'';
+height:2px;width:20%;
+z-index:2
+}
+#leftcolumn h2{
+font-size:1.1em;
+text-shadow:5px 5px 1px #3c322b /* 文字の影 */
+}
+#leftcolumn h2:first-letter{
+font-size:1.4em
+}
+h3{
+font-size:1.1em;
+margin:10px 0
+}
+h3 span{
+background:#c5c1a4;
+border-radius:3px;
+color:#fff;
+display:inline-block;
+padding:0 15px
+}
+h2 + h3{
+margin-top:0
+}
+#leftcolumn > h2:first-child,#rightcolumn h2:first-child{
+margin-top:5px;
+}
+dt{
+clear:both;
+font-weight:700;
+float:left;
+margin:0 0 5px;
+padding:0 5px;
+width:12em /* 文字数によっては調整 */
+}
+dd{
+border-bottom:dotted 1px;
+margin:0 0 5px 14em /* dtのwidthに2足してます */
+}
+em{
+font-style:normal;
+font-weight:700
+}
+input,textarea{
+background:#fff;
+border:1px solid #735648;
+color:#735648;
+margin:3px 0;
+width:200px
+}
+textarea{
+height:50px
+}
+hr{
+border-top:1px solid #ccc
+}
+.marker{
+background:#e4be8b;
+background:-webkit-linear-gradient(rgba(228,190,139,0) 80%, #e4be8b 0%);
+background:linear-gradient(rgba(228,190,139,0) 80%, #e4be8b 0%)
+}
+.dcline{
+border-left:5px solid;
+margin:8px 0;
+padding:3px 3px 3px 10px
+}
+.textbox{
+border:1px dashed;
+border-radius:5px;
+margin:10px 0;
+padding:3px;
+text-align:center
+}
+.title{
+color:#5c4d41;
+font-size:1.5em;
+font-weight:700;
+margin:2em 0;
+text-shadow:5px 5px 1px #ccc /* 文字の影 */
+}
+.r-justified{
+text-align:right
+}
+.r-justified p{
+display:inline-block;
+text-align:left
+}
+.inline{
+display:inline-block
+}
+
+/*  文字の下の線
+------------------------------ */
+/* bodyのfont-sizeを変更したら数値を変更 */
+/* 2.6 = font-size:1.3 x line-height:2 */
+.line{
+padding-bottom:0.1em;
+background-color:#fff;
+background-image:-webkit-linear-gradient(left, #fff 1.1px, rgba(255,255,255,0) 1px), -webkit-linear-gradient(top, #666 1.1px, rgba(102,102,102,0) 1px);
+background-image:linear-gradient(to right, #fff 1.1px, rgba(255,255,255,0) 1px), linear-gradient(to bottom, #666 1.1px, rgba(102,102,102,0) 1px);
+background-size:2px 2.6rem;
+line-height:2
+}
+
+/* ===================================
+横幅800pxで切り替え
+=================================== */
+
+@media screen and (max-width: 800px){
+dt{float:none;clear:none}
+dd{margin-left:20px}
+input,textarea{width:100%}
+img{max-width:100%;height:auto} /* 画像の縮小表示 */
+}
+
+/* ===================================
+スマホ、タブレット用
+横幅600pxで切り替え
+=================================== */
+
+@media screen and (max-width: 600px){
+body{
+background:#5c4d41;
+font-size:1.5em;
+padding:15px
+}
+#wrapper{
+background:none;
+margin-bottom:50px
+}
+#header-inner{
+padding:0 0 20px;
+text-align:left;
+margin-right:70px; /* メニューを開くボタン分 */
+min-height:70px /* メニューを開くボタン分 */
+}
+#rightcolumn{
+border-radius:10px;
+padding:20px
+}
+#leftcolumn{
+padding:0 20px
+}
+h1:not(.index){
+font-size:1.2em;
+}
+h2{
+margin:20px -5px
+}
+#leftcolumn h2{
+border-left: 0;
+border-right:0;
+font-size:1.3em;
+margin:20px -15px
+}
+/*  文字の下の線
+------------------------------ */
+/* bodyのfont-sizeを変更したら数値を変更 */
+/* 3 = font-size:1.5 x line-height:2 */
+.line{
+background-size:2px 3rem;
+line-height:2
+}
+#wrapper{height:auto;width:auto}
+#rightcolumn-wrap{float:none;margin-left:0}
+#rightcolumn{margin-left:0}
+#leftcolumn{border-radius:0;float:none}
+
+/* ===================================
+スマホ、タブレット用メニュー
+=================================== */
+
+/*  スライド
+------------------------------ */
+#leftcolumn-wrap{
+background:#ffffff; /* 背景色 */
+line-height:2;
+margin:0;
+padding:80px 0 20px; /* メニューボタン分空ける */
+position:fixed;
+height:100%;width:280px; /* (*1)同じにする */
+top:0;right:0;
+-ms-transform:translate(280px); /* (*1)同じにする */
+-webkit-transform:translate(280px); /* (*1)同じにする */
+transform:translate(280px); /* (*1)同じにする */
+transition:.3s;
+z-index:1000
+}
+#side-bg{
+background:rgba(51,51,51,.5)/* 周りの背景色 */
+}
+/*  メニュー
+------------------------------ */
+#menu{
+background:#db856e;
+margin: 0 -20px;
+text-shadow:none
+}
+nav li{
+border-bottom:1px solid #ccc;
+}
+nav ul li ul li:last-child{
+border:0
+}
+nav li a,nav li span{
+font-size:1.3em;
+padding:5px 10px
+}
+nav li a:hover,nav li span:hover{
+border-radius:0
+}
+nav li a:first-letter,nav li span:first-letter{
+color:inherit
+}
+.sub-menu li a{
+background:#fff;
+color:#735648
+}
+/*  メニューを開くボタン
+------------------------------ */
+#open{
+background:#68c6c6; /* 背景 */
+border:1px dashed #fff; /* 枠線 */
+border-radius:3px;
+box-shadow:0 0 0 5px #68c6c6,5px 5px 8px #3c322b;
+color:#fff; /* 文字色 */
+display:inline-block;
+position:absolute;
+text-align:center;
+height:46px;width:46px; /* 大きさ */
+right:10px; /* 位置 */
+text-shadow:none;
+z-index:1001
+}
+#open-icon,#open-icon:before,#open-icon:after{
+background:#fff /* 線の色 */
+}
+
+#leftcolumn{height:100%;overflow:auto;-webkit-overflow-scrolling:touch}
+#leftcolumn-wrap.open{-ms-transform:translate(0);-webkit-transform:translate(0);transform:translate(0)}
+#side-bg{display:none;position:fixed;height:100%;width:100%;top:0;left:0;z-index:999;cursor:pointer}
+#open.buttonclose{position:fixed;top:15px;right:25px}
+.open-text{font-size:12px;position:absolute;bottom:0;left:0;width:100%}
+#open-icon{display:block;margin:-1px 0 0 -10px;position:absolute;top:15px;left:50%;height:2px;width:20px}
+#open-icon:before,#open-icon:after{content:"";display:block;position:absolute;top:50%;left:0;height:2px;width:20px;transition:.3s}
+#open-icon:before{margin-top:-7px}
+#open-icon:after{margin-top:5px}
+#open .close{background:transparent}
+#open .close:before,#open .close:after{margin-top:0}
+#open .close:before{-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+#open .close:after{-ms-transform:rotate(-135deg);-webkit-transform:rotate(-135deg);transform:rotate(-135deg)}
+}
