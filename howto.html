@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小ネタ集</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="icon" href="image/favicon.png" sizes="32x32" />
+<link rel="icon" href="image/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="image/favicon.png" />
+</head>
+<body>
+<!-- ▼全体の囲み▼ -->
+<div id="wrapper">
+
+<!-- メニューを開くボタン -->
+<div id="open"><span id="open-icon"></span><span class="open-text">menu</span></div>
+
+<!-- ▼ヘッダー▼ -->
+<header>
+<div id="header-inner">
+<h1><a href="index.html">Yu Record</a></h1>
+読書記録・活動記録
+</div>
+</header>
+<!-- ▲ヘッダー▲ -->
+
+<!-- ▼メイン▼ -->
+<div id="contents" class="cf">
+
+<!-- ▼記事 -->
+<div id="rightcolumn-wrap">
+<div id="rightcolumn">
+<article>
+
+<h2 class="title">小ネタ集</h2><p>Webページの制作に便利な小ネタをまとめました。参考にどうぞ。</p>
+
+<div class="textbox">
+    <nav>
+        <label id="toc" class="title"><h3>目次</h3></label>
+        <div class="toc">
+            <li><a href="#toc1">Safariでソースコードを見る</a></li>
+            <li><a href="#toc2">ターミナルをフォルダから開く</a></li>
+            <li><a href="#toc3">複数のファイルをまとめて送信する</a></li>
+            <!--<li><a href="#toc4">その他ターミナルのコマンド集</a></li>-->            
+        </div>
+    </nav>
+</div>
+<section id="toc1">
+    <h2>Safariでソースコードを見る</h2>
+    <p>参考にしたいホームページがどのように記述されているか見ることができます。</p><p>使用しているブラウザによっては初期状態から見ることができるようになっていますが、Safariは設定が必要です。</p>
+    <h3 class="dcline">事前準備</h3>
+    <ul>
+        <li>⒈Safariを開いた状態で、Macbookの左上の「Safari」→「設定」→「詳細」を選択</li>
+        <li>⒉一番下の「メニューバーに”開発”メニューを表示」にチェックを入れる</li>
+        <li>⒊ホームページの何もないところを右クリック（マウスパッドは2本指タップ）</li>
+    </ul>
+    <br><p>メニューバーに「<em>ページのソースを表示</em>」「<em>要素の詳細を表示</em>」のメニューが加わりました。</p>
+    <div class="textbox">before<img src="image/beforemenu.png" width="200" alt="前" text=""><br>after<img src="image/aftermenu.png" width="200" alt="後"></div>
+    <h3 class="dcline">実践</h3>
+    <p>この状態から、「ページのソースを表示」「要素の詳細を表示」のいずれかをクリックすると、以下のような画面が表示されます。</p>
+    <img src="image/mieru.png" width="700" alt="前">
+    <p>HTMLの記述が見えるようになりました。</p>
+    <p>「要素…」を選んでも「ページ…」を選んでも最初の表示画面が変わるだけで大きな違いはありませんが、個人的には「要素…」は分析向き、「ページ…」はHTMLコードのコピペ向きに感じます。</p>  
+    <p>ちなみに、"Microsoft edge"を使用している場合は、「<em>開発者ツールで調査する</em>」から見ることができます。</p>
+</section>
+<section id="toc2">
+    <h2>ターミナルをフォルダから開く</h2>
+    <p>例として、以下のようないい感じのHTMLを記述したとします。</p>
+    <img src="image/i-kanji.png" width="700">
+    <p>これらのファイルをすべて適当なフォルダにまとめると、ファインダー上ではこのように表示されます。</p>
+    <img src="image/folder.png" width="700">
+    <p>ここで、まとめたフォルダの水色のアイコン部分を右クリック（マウスパッドは二本指タップ）すると、以下のようなメニューが表示されるので、「<em>フォルダに新規ターミナル</em>」を選択します。</p>
+    <img src="image/foldermenu.png" width="200">
+    <p>ターミナルが開くので、"<em>ls</em>"（"アイエス"ではなく"エルエス"であることに注意）を入力し、フォルダにまとめたファイルが表示されることを確認しましょう。</p>
+    <img src="image/sample.png" width="500">
+    <p>ここから、目的の送り先へファイルをコピーしていきます。例えば、<em>sample@sample.jp</em>＞<em>home</em>＞<em>name</em>＞<em>public_html</em>という入れ子状態になっている送り先に<em>index.html</em>というファイルをコピーしたい時には、下記のコマンドを入力します。</p>
+    <div class="textbox">scp index.html sample@sample.jp/home/name/public_html</div>
+    <p>送信状況を表す表示が出現するので、100%になれば送信完了です。</p>
+</section>
+
+<section id="toc3">
+    <h2>複数のファイルをまとめて送信する</h2>
+    <p>ページをたくさん作った時や、やたらに画像を載せたときなど、いちいち送信するのが面倒な時に使います。ここでは<a href="#toc2" class="bg-none">前項</a>の例を流用して、２つの方法を紹介します。</p>
+
+    <h3 class="dcline">ワイルドカード（＊）を使う</h3>
+    <p><a href="#toc2" class="bg-none">前項</a>で指定したフォルダからターミナルを開いた状態で下記のコマンドを入力すると、フォルダ内の「.html」の拡張子がついたファイルをまとめてコピーします。</p>
+    <p class="textbox">scp <em>*.html</em> sample@sample.jp/home/name/public_html</p>
+    <p>拡張子を".png"や".mov"などに置き換えることもできます。便利ですが、"rm"などの消去したりする指示においても<em>すべてのファイルについて実行する</em>ので、<em>くれぐれも注意してください</em>。</p>
+
+    <h3 class="dcline">ファイルの種類ごとにまとめる</h3>
+    <p>画像や動画などを種類ごとにフォルダにまとめ、入れ子状態にします。ここでは、画像ファイルを<em>image</em>というフォルダに押し込めました。</p>
+    <img src="image/sample2.png" width="700">
+    <p><a href="#toc2" class="bg-none">前項</a>同様にフォルダからターミナルを開き、下記のコマンドを入力すると、フォルダと中身がまるまるコピーされます。</p>
+    <div class="textbox">scp <em>-r image</em> sample@sample.jp/home/name/public_html</div>
+    <p>また、前述のワイルドカードと組み合わせて下記のコマンドを入力すると、入れ子の状態を保ったまますべてのファイルが送信されます。</p>
+    <div class="textbox">scp <em>-r *</em> sample@sample.jp/home/name/public_html</div>
+    <p>注意点として、<em>image</em>フォルダにまとめた画像をHTML上で表示する時には、フォルダの指定を忘れないようにしましょう。</p>
+    <div class="textbox">
+        <li>src="<em>image/</em>image1.png"[○]</li>
+        <li>src="image1.png"[×]</li>
+    </div>
+</section>
+
+<!-- ▲右側の内容▲ -->
+</article>
+
+</div></div><!-- ▲右側▲ -->
+
+
+<!-- ▼左側▼ -->
+<div id="side-bg"></div>
+<div id="leftcolumn-wrap">
+<div id="leftcolumn">
+
+<!-- ▼メニュー▼ -->
+<h2>Menu</h2>
+<div id="menu">
+  <nav>
+  <ul>
+  
+  <li><a href="index.html">Top</a></li>
+  <li><span>Gallery</span>
+    <ul class="sub-menu">
+      <li><a href="jsa.html">情報科学A</a></li>
+      <li><a href="howto.html">小ネタ集</a></li>
+    </ul></li>
+  <li><span>Reading</span>
+    <ul class="sub-menu">
+      <li><a href="1Q84.html">1Q84</a></li>
+    </ul></li>
+  <li><a href="specialthanks.html">Special Thanks</a></li>
+  
+  </ul>
+  </nav>
+</div>
+<!-- ▲メニュー▲ -->
+
+
+
+<ul class="sns_btns">
+    <li class="facebook_btn"><a href="#" target="_blank" class="bg_fill"><i class="fab fa-facebook icon"></i></a></li>
+    <li class="twitter_btn"><a href="#" target="_blank" class="bg_fill"><i class="fab fa-twitter icon"></i></a></li>
+    <li class="mail_btn"><a href="#" target="_blank" class="bg_fill"><i class="fas fa-envelope icon"></i></a></li>
+    <li class="youtube_btn"><a href="#" target="_blank" class="bg_fill"><i class="fab fa-youtube icon"></i></a></li>
+</ul>
+
+
+</div></div><!-- ▲左側▲ -->
+
+</div><!-- ▲メイン▲ -->
+
+<!-- ▼フッター▼ -->
+<footer id="footer">
+	<div class="footer_inner">
+		<ul>
+			<li><div id="copyright">Copyright &copy; <span></span>2023 Yu Record</div></li>
+		</ul>
+		
+	</div>
+</footer>
+<!-- ▲フッター▲ -->
+
+</div><!-- ▲全体の囲み▲ -->
+
+<!-- 余白 -->
+<div style="height:10px"></div>
+
+<!-- ページトップに戻る -->
+<a href="1Q84.html" id="pagetop">top</a>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.height.js"></script>
+<script src="js/jquery.scroll.js"></script>
+<script src="js/jquery.toggle.js"></script>
+</body>
+</html>
