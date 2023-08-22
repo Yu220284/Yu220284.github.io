@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special thanks</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="icon" href="image/favicon.png" sizes="32x32" />
+  <link rel="icon" href="image/favicon.png" sizes="192x192" />
+  <link rel="apple-touch-icon-precomposed" href="image/favicon.png" />
+</head>
+<body>
+<!-- ▼全体の囲み▼ -->
+<div id="wrapper">
+
+<!-- メニューを開くボタン -->
+<div id="open"><span id="open-icon"></span><span class="open-text">menu</span></div>
+
+<!-- ▼ヘッダー▼ -->
+<header>
+<div id="header-inner">
+<h1><a href="index.html">Yu Record</a></h1>
+読書記録・活動記録
+</div>
+</header>
+<!-- ▲ヘッダー▲ -->
+
+<!-- ここからメイン -->
+<div id="contents" class="cf">
+
+<!-- 記事 -->
+<div id="rightcolumn-wrap">
+<div id="rightcolumn">
+<article>
+<!-- 記事の内容 -->
+
+
+
+<h2 id="Special Thanks">Special Thanks</h2>
+
+当サイトの制作・公開にあたり、参考にしたサイトの一覧を掲載させていただいています。<br>
+多大なご助力に格別の感謝を申し上げます。
+<hr>
+<section>
+  <dt>MASTER:</dt>
+  <dd>Yoshida</dd>
+
+  <dt>SITE NAME:</dt>
+  <dd>情報科学</dd>
+
+  <dt>URL:</dt>
+  <dd><a href="http://www.clas.kitasato-u.ac.jp/~yoshida/">http://www.clas.kitasato-u.ac.jp/~yoshida/</a></dd>
+
+</section>
+<section>
+  <br>
+  <dt>MASTER:</dt>
+  <dd>Mana</dd>
+
+  <dt>SITE NAME:</dt>
+  <dd>webクリエイターボックス</dd>
+ 
+  <dt>URL:</dt>
+  <dd><a href="https://www.webcreatorbox.com/">https://www.webcreatorbox.com/</a></dd>
+</section>
+<section>
+  <br>
+  <dt>MASTER:</dt>
+  <dd>まぐろ。</dd>
+  
+  <dt>SITE NAME:</dt>
+  <dd>Fool Lovers</dd>
+  
+  <dt>URL:</dt>
+  <dd><a href="https://foollovers.com/">https://foollovers.com/</a></dd>
+</section>
+
+<!-- ▲右側の内容▲ -->
+</article>
+
+</div></div><!-- ▲右側▲ -->
+
+
+<!-- ▼左側▼ -->
+<div id="side-bg"></div>
+<div id="leftcolumn-wrap">
+<div id="leftcolumn">
+
+<!-- ここからメニュー -->
+<h2>Menu</h2>
+<div id="menu">
+  <nav>
+  <ul>
+  
+  <li><a href="index.html">Top</a></li>
+  <li><span>Gallery</span>
+    <ul class="sub-menu">
+      <li><a href="jsa.html">情報科学A</a></li>
+      <li><a href="howto.html">小ネタ集</a></li>
+    </ul></li>
+  <li><span>Reading</span>
+    <ul class="sub-menu">
+      <li><a href="1Q84.html">1Q84</a></li>
+    </ul></li>
+  <li><a href="specialthanks.html">Special Thanks</a></li>
+  
+  </ul>
+  </nav>
+</div>
+<!-- ここまでメニュー -->
+</div></div><!-- ▲左側▲ -->
+
+</div><!-- ▲メイン▲ -->
+
+<!--フッターここから-->
+<footer id="footer">
+	<div class="footer_inner">
+		<ul>
+			<li><div id="copyright">Copyright &copy; <span></span>2023 Yu Record</div></li>
+		</ul>
+		
+	</div>
+</footer>
+<!--フッターここまで-->
+
+</div><!-- ▲全体の囲み▲ -->
+
+<!--余白-->
+<div style="height:10px"></div>
+
+<!-- ページトップに戻る -->
+<a href="specialthanks.html" id="pagetop">top</a>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.height.js"></script>
+<script src="js/jquery.scroll.js"></script>
+<script src="js/jquery.toggle.js"></script>
+</body>
+</html>
